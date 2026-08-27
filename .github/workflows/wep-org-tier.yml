@@ -1,0 +1,12 @@
+name: WEP org tier control
+run-name: WEP-ORG-TIER-${{ github.sha }}
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  marker:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "WEP_ORG_TIER=${GITHUB_SHA}"
